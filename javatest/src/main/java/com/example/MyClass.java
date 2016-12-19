@@ -18,7 +18,6 @@ public class MyClass {
     }
 
 
-
     static class MyThread1 extends Thread{
         @Override
         public void run() {
