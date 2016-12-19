@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
 import com.example.owen.stud.R;
 
 import java.util.ArrayList;
@@ -59,6 +60,7 @@ public class BaiduMapMain extends Activity {
     }
 
     private void requestLocation() {
+        refreshLocation();
         mLocationClient.start();
     }
 
@@ -88,8 +90,21 @@ public class BaiduMapMain extends Activity {
         }
     }
 
-    public class MyLocationListener implements BDLocationListener {
+    public void refreshLocation() {
+        LocationClientOption option = new LocationClientOption();
+//        option.setScanSpan(5000);
+        option.setIsNeedAddress(true);
+        mLocationClient.setLocOption(option);
+    }
 
+    @Override
+    protected void onDestroy() {
+        mLocationClient.stop();
+        super.onDestroy();
+    }
+
+    public class MyLocationListener implements BDLocationListener {
+        //在23上可以成功，但是在19上就不行，但是问题暂未确定出在Android版本还是手机没有sim卡
         @Override
         public void onReceiveLocation(BDLocation bdLocation) {
             StringBuilder currentPosition = new StringBuilder();
@@ -100,6 +115,7 @@ public class BaiduMapMain extends Activity {
             currentPosition.append("城市：").append(bdLocation.getCity())
                     .append("\n");
             Log.d("huangshaohua", "" + currentPosition.toString());
+            Log.d("huangshaohua" , "errotype: "+ bdLocation.getLocType());
         }
 
         @Override
