@@ -22,7 +22,6 @@ public class Fragment2 extends Fragment {
         Log.d(TAG, "onAttach");
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
