@@ -90,5 +90,6 @@ public class MyService extends Service {
             Log.d("MyService", "getProgress");
             return 0;
         }
+
     }
 }
