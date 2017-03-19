@@ -10,8 +10,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/activitylife" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/brpadcast" />
+            <option value="$PROJECT_DIR$/broadcast" />
             <option value="$PROJECT_DIR$/fragment" />
+            <option value="$PROJECT_DIR$/javatest" />
             <option value="$PROJECT_DIR$/service" />
           </set>
         </option>
