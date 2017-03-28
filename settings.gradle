@@ -1,1 +1,1 @@
-include ':app', ':activitylife', ':fragment'
+include ':app', ':activitylife', ':fragment', ':brpadcast'
