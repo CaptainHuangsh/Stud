@@ -16,4 +16,5 @@ public class DialogActivity extends Activity{
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.dialog_layout);
     }
+
 }
