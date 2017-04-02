@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent().setClass(MainActivity.this, SecondActivity.class));
             }
         });
-//        Button btn2 = (Button)findViewById(R.id.)
+        Button btn2 = (Button)findViewById(R.id.start_dialog);
     }
 
     @Override
