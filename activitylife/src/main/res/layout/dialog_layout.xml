@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="this is not a normal activity"
+        android:text="this is not a dialog activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
