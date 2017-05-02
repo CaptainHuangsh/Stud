@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn4;
     private Button btn5;
     private Button btn6;
+    private Button btn7;
+
     private MyService.DownloadBinder downloadBinder;
     private ServiceConnection connection = new ServiceConnection() {
         @Override
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn4 = (Button) findViewById(R.id.stop_service);
         btn5 = (Button) findViewById(R.id.bind_service);
         btn6 = (Button) findViewById(R.id.unbind_service);
+        btn7 = (Button) findViewById(R.id.start_intent_service);
         txt = (TextView) findViewById(R.id.text1);
         btn2.setOnClickListener(this);
         btn.setOnClickListener(this);
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
+        btn7.setOnClickListener(this);
     }
 
     @Override
@@ -108,14 +112,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 stopService(new Intent(this, MyService.class));
                 break;
             case R.id.bind_service:
-                Intent bindIntent = new Intent(this,MyService.class);
-                bindService(bindIntent,connection,BIND_AUTO_CREATE);//绑定服务
+                Intent bindIntent = new Intent(this, MyService.class);
+                bindService(bindIntent, connection, BIND_AUTO_CREATE);//绑定服务
                 break;
             case R.id.unbind_service:
                 unbindService(connection);//接触绑定
+                break;
+            case R.id.start_intent_service:
+                //打印主线程id
+                Log.d("MainActivity ", " Thread id is " + Thread.currentThread()
+                        .getId());
+                Intent intentService = new Intent(this,MyIntentService.class);
+                startService(intentService);
                 break;
             default:
                 break;
         }
     }
+
+
 }

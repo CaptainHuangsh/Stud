@@ -38,7 +38,7 @@ public class MyService extends Service {
 //        = new Notification(R.mipmap.ic_launcher, "notification comes",
 //                System.currentTimeMillis());
         Intent notificationIntent = new Intent(this, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
         notification = new Notification.Builder(mContext)
                 .setContentTitle("huangshaohua")
                 .setContentText("haoshuai")
