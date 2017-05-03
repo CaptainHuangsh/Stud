@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="setting">
+        <PreferenceScreen
+            android:key="setting_key1"
+            android:summary="1"
+            android:title="setting1" />
+        <PreferenceScreen
+            android:key="setting_key2"
+            android:summary="2"
+            android:title="setting2" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="setting2">
+        <CheckBoxPreference
+            android:key="pref_sync"
+            android:title="checkbox"
+            android:summary="checkout"
+            android:defaultValue="true" />
+        <ListPreference
+            android:dependency="pref_sync"
+            android:key="pref_syncConnectionType"
+            android:title="ListPref"
+            android:dialogTitle="o"
+            android:entries="@string/pref_title_system_sync_settings"
+            android:entryValues="@string/pref_default_display_name"
+            android:defaultValue="@string/pref_description_social_recommendations" />
+    </PreferenceCategory>
+</PreferenceScreen>

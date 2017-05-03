@@ -1,1 +1,1 @@
-include ':app', ':activitylife', ':fragment', ':broadcast', ':service', ':javatest', ':notification'
+include ':app', ':activitylife', ':fragment', ':broadcast', ':service', ':javatest', ':notification', ':settings'

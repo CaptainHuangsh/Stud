@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/javatest" />
             <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/settings" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
