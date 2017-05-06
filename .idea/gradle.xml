@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/broadcast" />
             <option value="$PROJECT_DIR$/fragment" />
+            <option value="$PROJECT_DIR$/http" />
             <option value="$PROJECT_DIR$/javatest" />
             <option value="$PROJECT_DIR$/notification" />
             <option value="$PROJECT_DIR$/service" />
