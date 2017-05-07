@@ -18,6 +18,7 @@ import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
 import com.example.owen.stud.notification.NotificationMain;
 import com.example.owen.stud.service.ServiceMain;
+import com.example.owen.stud.settings.SettingMain;
 
 public class MainActivity extends AppCompatActivity {
     private String[] items = {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                launch(ServiceMain.class);
+                launch(SettingMain.class);
             }
         });
     }

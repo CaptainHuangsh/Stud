@@ -56,6 +56,12 @@
 
         <!--service-->
         <activity android:name=".service.ServiceMain"/>
+
+        <!--settings-->
+        <activity android:name=".settings.SettingMain"/>
+        <activity android:name=".settings.Setting2"/>
+        <activity android:name=".settings.Setting"/>
+        <activity android:name=".settings.SettingsActivity"/>
     </application>
 
 </manifest>
