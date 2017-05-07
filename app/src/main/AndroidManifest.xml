@@ -50,6 +50,9 @@
         <!--fragment-->
         <activity android:name=".fragment.FragmentMain"/>
         <activity android:name=".fragment.Main2Activity"/>
+
+        <!--notification-->
+        <activity android:name=".notification.NotificationMain"/>
     </application>
 
 </manifest>

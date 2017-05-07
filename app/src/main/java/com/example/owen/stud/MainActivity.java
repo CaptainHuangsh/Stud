@@ -1,5 +1,6 @@
 package com.example.owen.stud;
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import com.example.owen.stud.broadcast.BroadcastMain;
 import com.example.owen.stud.fragment.Fragment2;
 import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
+import com.example.owen.stud.notification.NotificationMain;
 
 public class MainActivity extends AppCompatActivity {
     private String[] items = {
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                launch(FragmentMain.class);
+                launch(NotificationMain.class);
             }
         });
     }

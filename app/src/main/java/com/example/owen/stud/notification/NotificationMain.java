@@ -1,4 +1,4 @@
-package com.owen.notification;
+package com.example.owen.stud.notification;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -14,12 +14,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RemoteViews;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.owen.stud.R;
+
+public class NotificationMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_notification_main);
 
 
         Button btn1 = (Button) findViewById(R.id.notification);
@@ -27,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
         Button btn3 = (Button) findViewById(R.id.headup_notification);
 
         btn1.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com"));
                 //构造PendingIntent
-                PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent, 0);
-                Notification.Builder builder = new Notification.Builder(MainActivity.this);
+                PendingIntent pendingIntent = PendingIntent.getActivity(NotificationMain.this, 0, intent, 0);
+                Notification.Builder builder = new Notification.Builder(NotificationMain.this);
                 builder.setSmallIcon(R.mipmap.ic_launcher)
                         .setContentIntent(pendingIntent)
                         .setAutoCancel(true)
@@ -55,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("http://www.sina.com"));
                 PendingIntent pendingIntent =
-                        PendingIntent.getActivity(MainActivity.this, 0, intent, 0);
-                Notification.Builder builder = new Notification.Builder(MainActivity.this);
+                        PendingIntent.getActivity(NotificationMain.this, 0, intent, 0);
+                Notification.Builder builder = new Notification.Builder(NotificationMain.this);
                 builder.setSmallIcon(R.mipmap.ic_launcher)
                         .setContentIntent(pendingIntent)
                         .setAutoCancel(true)
@@ -86,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Notification.Builder builder =
-                        new Notification.Builder(MainActivity.this)
+                        new Notification.Builder(NotificationMain.this)
                                 .setSmallIcon(R.mipmap.ic_launcher)
                                 .setPriority(Notification.PRIORITY_DEFAULT)
                                 .setCategory(Notification.CATEGORY_MESSAGE)//在5.0之前会崩溃
@@ -95,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent push = new Intent();
                 push.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                push.setClass(MainActivity.this,MainActivity.class);
+//                push.setClass(NotificationMain.this,NotificationMain.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(
-                        MainActivity.this,0,push,PendingIntent.FLAG_CANCEL_CURRENT);
+                        NotificationMain.this,0,push,PendingIntent.FLAG_CANCEL_CURRENT);
                 builder.setContentText("Heads-Up Notification")
                         .setFullScreenIntent(pendingIntent,true);
 
