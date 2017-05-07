@@ -53,6 +53,9 @@
 
         <!--notification-->
         <activity android:name=".notification.NotificationMain"/>
+
+        <!--service-->
+        <activity android:name=".service.ServiceMain"/>
     </application>
 
 </manifest>
