@@ -10,6 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.owen.stud.activitylife.ActivityMain;
+import com.example.owen.stud.broadcast.BroadcastMain;
+import com.example.owen.stud.fragment.Fragment2;
+import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                launch(HttpMain.class);
+                launch(FragmentMain.class);
             }
         });
     }

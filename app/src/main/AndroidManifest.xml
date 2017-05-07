@@ -27,13 +27,29 @@
             </intent-filter>
         </activity>
         <!--http-->
-        <activity android:name=".http.HttpMain"/>
-        <activity android:name=".http.netParse.jsonParse.JsonActivity"/>
-        <activity android:name=".http.netParse.xmlParse.XmlActivity"/>
-        <activity android:name=".http.network.httpClient.HttpClient"/>
-        <activity android:name=".http.network.httpURLConnection.HttpURLConnectionMain"/>
-        <activity android:name=".http.network.SimpleWebView"/>
-        <activity android:name=".http.network.okHttp.OkHttpMain"/>
+        <activity android:name=".http.HttpMain" />
+        <activity android:name=".http.netParse.jsonParse.JsonActivity" />
+        <activity android:name=".http.netParse.xmlParse.XmlActivity" />
+        <activity android:name=".http.network.httpClient.HttpClient" />
+        <activity android:name=".http.network.httpURLConnection.HttpURLConnectionMain" />
+        <activity android:name=".http.network.SimpleWebView" />
+        <activity android:name=".http.network.okHttp.OkHttpMain" />
+
+        <!--activityLife-->
+        <activity
+            android:name=".activitylife.SecondActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activitylife.ActivityMain" />
+        <activity
+            android:name=".activitylife.DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <!--broadcast-->
+        <activity android:name=".broadcast.BroadcastMain"/>
+
+        <!--fragment-->
+        <activity android:name=".fragment.FragmentMain"/>
+        <activity android:name=".fragment.Main2Activity"/>
     </application>
 
 </manifest>

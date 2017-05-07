@@ -1,4 +1,4 @@
-package com.owen.brpadcast;
+package com.example.owen.stud.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

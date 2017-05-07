@@ -1,4 +1,4 @@
-package com.owen.brpadcast;
+package com.example.owen.stud.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -10,39 +10,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.owen.stud.R;
 
-    private IntentFilter intentFiter;
-    private NetworkchangeReciever networkchangeReciever;
+public class BroadcastMain extends AppCompatActivity {
+
+    private IntentFilter intentFilter;
+    private NetworkChangeReceiver networkChangeReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_broadcast);
 
-        intentFiter = new IntentFilter();
-        intentFiter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-        networkchangeReciever = new NetworkchangeReciever();
-        registerReceiver(networkchangeReciever,intentFiter);
+        intentFilter = new IntentFilter();
+        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+        networkChangeReceiver = new NetworkChangeReceiver();
+        registerReceiver(networkChangeReceiver, intentFilter);
 
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(networkchangeReciever);
+        unregisterReceiver(networkChangeReceiver);
     }
 
-    private class NetworkchangeReciever extends BroadcastReceiver{
+    private class NetworkChangeReceiver extends BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {
             ConnectivityManager connectivityManager = (ConnectivityManager)
                     getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
             if(networkInfo != null && networkInfo.isAvailable()){
-                Toast.makeText(MainActivity.this,"network is available",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BroadcastMain.this,"network is available",Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(MainActivity.this,"network is unavailable",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BroadcastMain.this,"network is unavailable",Toast.LENGTH_SHORT).show();
             }
 
         }
