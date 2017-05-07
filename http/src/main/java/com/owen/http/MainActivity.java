@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.owen.http.netParse.xmlParse.PullXmlActivity;
+import com.owen.http.netParse.jsonParse.JsonActivity;
+import com.owen.http.netParse.xmlParse.XmlActivity;
 import com.owen.http.network.SimpleWebView;
 import com.owen.http.network.httpClient.HttpClient;
 import com.owen.http.network.httpURLConnection.HttpURLConnectionMain;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn3 = (Button) findViewById(R.id.button3);
         Button btn4 = (Button) findViewById(R.id.button4);
         Button btn5 = (Button) findViewById(R.id.button5);
+        Button btn6 = (Button) findViewById(R.id.button6);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +52,13 @@ public class MainActivity extends AppCompatActivity {
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PullXmlActivity.class));
+                startActivity(new Intent(MainActivity.this, XmlActivity.class));
+            }
+        });
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, JsonActivity.class));
             }
         });
     }

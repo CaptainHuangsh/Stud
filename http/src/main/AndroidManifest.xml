@@ -23,7 +23,8 @@
         <activity android:name=".network.httpClient.HttpClient"/>
         <activity android:name=".network.SimpleWebView"/>
         <activity android:name=".network.okHttp.OkHttpMain"/>
-        <activity android:name=".netParse.xmlParse.PullXmlActivity"/>
+        <activity android:name=".netParse.xmlParse.XmlActivity"/>
+        <activity android:name=".netParse.jsonParse.JsonActivity"/>
     </application>
 
 </manifest>

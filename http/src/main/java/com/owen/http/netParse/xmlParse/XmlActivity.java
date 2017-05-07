@@ -9,10 +9,14 @@ import android.widget.TextView;
 
 import com.owen.http.R;
 
+import org.xml.sax.InputSource;
+import org.xml.sax.XMLReader;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.StringReader;
+
+import javax.xml.parsers.SAXParserFactory;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -22,40 +26,67 @@ import okhttp3.Response;
  * Created by owen on 2017/5/6.
  */
 
-public class PullXmlActivity extends AppCompatActivity {
+public class XmlActivity extends AppCompatActivity {
+    private static final String HOSTS = "http://192.168.0.110:8888/get_data.xml";
+    private static final int TYPE_PULL = 0;
+    private static final int TYPE_SAX = 1;
     TextView text;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_okhttp);
+        setContentView(R.layout.xml_parse);
         Button btn = (Button) findViewById(R.id.send_request);
+        Button btn2 = (Button) findViewById(R.id.json_gson);
         text = (TextView) findViewById(R.id.respond_text);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendRequestWithOkHttp();
+                sendRequestWithOkHttp(TYPE_PULL);
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendRequestWithOkHttp(TYPE_SAX);
             }
         });
     }
 
-    private void sendRequestWithOkHttp() {
+    private void sendRequestWithOkHttp(final int type) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder()
-                            .url("http://192.168.0.110:8888/get_data.xml")
+                            .url(HOSTS)
                             .build();
                     Response response = client.newCall(request).execute();
                     String responseText = response.body().string();
-                    parseWithPull(responseText);
+                    if (type == TYPE_PULL)
+                        parseWithPull(responseText);
+                    else if (type == TYPE_SAX)
+                        parseWithSax(responseText);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }).start();
+    }
+
+    private void parseWithSax(String xmlData) {
+        try {
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            XMLReader reader = factory.newSAXParser().getXMLReader();
+            ContentHandler handler = new ContentHandler();
+            //将ContentHandler的实例设置到XMLReader中来
+            reader.setContentHandler(handler);
+            //开始执行解析
+            reader.parse(new InputSource(new StringReader(xmlData)));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void parseWithPull(String xmlData) {
@@ -83,9 +114,9 @@ public class PullXmlActivity extends AppCompatActivity {
                     }
                     case XmlPullParser.END_TAG:
                         if ("app".equals(nodeName)) {
-                            Log.d("PullXmlActivity", "id : " + id);
-                            Log.d("PullXmlActivity", "name : " + name);
-                            Log.d("PullXmlActivity", "version : " + version);
+                            Log.d("XmlActivity", "id : " + id);
+                            Log.d("XmlActivity", "name : " + name);
+                            Log.d("XmlActivity", "version : " + version);
                         }
                         break;
                     default:
