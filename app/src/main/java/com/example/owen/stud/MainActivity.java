@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public void init() {
         hs.put("NetWork", HttpMain.class);
         hs.put("ActivityLife", ActivityMain.class);
