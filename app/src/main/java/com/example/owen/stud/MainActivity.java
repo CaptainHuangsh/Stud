@@ -25,15 +25,6 @@ public class MainActivity extends AppCompatActivity {
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
-    public void init() {
-        hs.put("NetWork", HttpMain.class);
-        hs.put("ActivityLife", ActivityMain.class);
-        hs.put("Fragment", FragmentMain.class);
-        hs.put("Broadcast", BroadcastMain.class);
-        hs.put("Notification", NotificationMain.class);
-        hs.put("Service", ServiceMain.class);
-        hs.put("Settings", SettingMain.class);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 launch(hs.get(items[position]));
             }
         });
+    }
+
+    public void init() {
+        hs.put("NetWork", HttpMain.class);
+        hs.put("ActivityLife", ActivityMain.class);
+        hs.put("Fragment", FragmentMain.class);
+        hs.put("Broadcast", BroadcastMain.class);
+        hs.put("Notification", NotificationMain.class);
+        hs.put("Service", ServiceMain.class);
+        hs.put("Settings", SettingMain.class);
     }
 
     public void launch(Class<?> cls) {
