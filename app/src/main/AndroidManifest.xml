@@ -62,6 +62,9 @@
         <activity android:name=".settings.Setting2"/>
         <activity android:name=".settings.Setting"/>
         <activity android:name=".settings.SettingsActivity"/>
+
+        <!--dialog-->
+        <activity android:name=".dialog.DialogMain"/>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.example.owen.stud.activitylife.ActivityMain;
 import com.example.owen.stud.broadcast.BroadcastMain;
+import com.example.owen.stud.dialog.DialogMain;
 import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
 import com.example.owen.stud.notification.NotificationMain;
@@ -21,7 +22,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
-            , "Service", "Settings"
+            , "Service", "Settings","DialogMain"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("Notification", NotificationMain.class);
         hs.put("Service", ServiceMain.class);
         hs.put("Settings", SettingMain.class);
+        hs.put("DialogMain", DialogMain.class);
     }
 
     public void launch(Class<?> cls) {
