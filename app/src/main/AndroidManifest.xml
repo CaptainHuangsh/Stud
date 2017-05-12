@@ -65,6 +65,9 @@
 
         <!--dialog-->
         <activity android:name=".dialog.DialogMain"/>
+
+        <!--recycleView-->
+        <activity android:name=".recycleView.RecycleViewMain"/>
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ import com.example.owen.stud.dialog.DialogMain;
 import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
 import com.example.owen.stud.notification.NotificationMain;
+import com.example.owen.stud.recycleView.RecycleViewMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
 
@@ -22,7 +23,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
-            , "Service", "Settings","DialogMain"
+            , "Service", "Settings", "DialogMain", "RecycleView"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("Service", ServiceMain.class);
         hs.put("Settings", SettingMain.class);
         hs.put("DialogMain", DialogMain.class);
+        hs.put("RecycleView", RecycleViewMain.class);
     }
 
     public void launch(Class<?> cls) {
