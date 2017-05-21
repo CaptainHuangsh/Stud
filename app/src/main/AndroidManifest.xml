@@ -98,6 +98,10 @@
         <!--baiduMap-->
         <activity android:name=".baiduMap.BaiduMapMain"/>
 
+        <!--contentProvider-->
+        <activity android:name=".contentProvider.ContentMain"/>
+        <activity android:name=".contentProvider.ContactActivity"/>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

@@ -11,14 +11,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
-        jackOptions {
+        /*jackOptions {
             enabled true
-        }
+        }*/
 //        适用java8属性 As2.4之后不需要
     }
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        targetCompatibility 1.7
+        sourceCompatibility 1.7
     }
 
     buildTypes {

@@ -26,7 +26,6 @@ public class ListViewMain extends AppCompatActivity {
     }
 
     private void initView() {
-        // TODO Auto-generated method stub
         Log.i("htp", "beans.size:" + beans.length);
         listView = (ListView) findViewById(R.id.listView1);
         adapter = new ListViewAdapter(ListViewMain.this, beans);

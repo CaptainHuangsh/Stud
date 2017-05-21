@@ -114,8 +114,6 @@ public class BaiduMapMain extends Activity {
                     .append("\n");
             currentPosition.append("城市：").append(bdLocation.getCity())
                     .append("\n");
-            Log.d("huangshaohua", "" + currentPosition.toString());
-            Log.d("huangshaohua" , "errotype: "+ bdLocation.getLocType());
         }
 
         @Override

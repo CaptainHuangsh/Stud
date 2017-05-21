@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.example.owen.stud.activitylife.ActivityMain;
 import com.example.owen.stud.baiduMap.BaiduMapMain;
 import com.example.owen.stud.broadcast.BroadcastMain;
+import com.example.owen.stud.contentProvider.ContentMain;
 import com.example.owen.stud.dialog.DialogMain;
 import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView","ListViewMain"
-            ,"BaiduMapMain"
+            ,"BaiduMapMain","ContentMain"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("RecycleView", RecycleViewMain.class);
         hs.put("ListViewMain", ListViewMain.class);
         hs.put("BaiduMapMain", BaiduMapMain.class);
+        hs.put("ContentMain", ContentMain.class);
     }
 
     public void launch(Class<?> cls) {
