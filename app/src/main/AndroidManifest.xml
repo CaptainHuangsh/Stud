@@ -93,20 +93,25 @@
         <activity
             android:name=".listView.ListViewMain"
             android:label="@string/title_activity_list_view_main"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!--baiduMap-->
-        <activity android:name=".baiduMap.BaiduMapMain"/>
+        <activity android:name=".baiduMap.BaiduMapMain" />
 
         <!--contentProvider-->
-        <activity android:name=".contentProvider.ContentMain"/>
-        <activity android:name=".contentProvider.ContactActivity"/>
+        <activity android:name=".contentProvider.ContentMain" />
+        <activity android:name=".contentProvider.ContactActivity" />
+        <activity android:name=".contentProvider.ProviderActivity"/>
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote">
-        </service>
+            android:process=":remote"/>
+
+        <provider
+            android:name="com.example.owen.stud.contentProvider.DatabaseProvider"
+            android:authorities="com.example.owen.stud.provider"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -25,5 +25,11 @@ public class ContentMain extends AppCompatActivity{
                 startActivity(new Intent(ContentMain.this,ContactActivity.class));
             }
         });
+        ((Button)findViewById(R.id.to_provider)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContentMain.this,ProviderActivity.class));
+            }
+        });
     }
 }
