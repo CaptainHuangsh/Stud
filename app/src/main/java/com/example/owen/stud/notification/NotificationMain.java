@@ -72,10 +72,15 @@ public class NotificationMain extends AppCompatActivity {
                 RemoteViews expandedView =
                         new RemoteViews(getPackageName(), R.layout.notification2);
                 expandedView.setTextViewText(R.id.text_view, "show me when expanded");
-                Notification notification = builder.build();
+                Notification notification = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                    notification = builder.build();
+                }
                 //指定视图
                 notification.contentView = contentView;
-                notification.bigContentView = expandedView;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    notification.bigContentView = expandedView;
+                }
                 //通过NotificationManager来发出Notification
                 NotificationManager notificationManager =
                         (NotificationManager) getSystemService(

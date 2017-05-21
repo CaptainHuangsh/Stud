@@ -1,5 +1,3 @@
-bin/
-gen/
 *.iml
 .gradle
 /local.properties

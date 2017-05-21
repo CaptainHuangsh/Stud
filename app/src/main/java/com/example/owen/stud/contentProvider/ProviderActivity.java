@@ -68,7 +68,7 @@ public class ProviderActivity extends AppCompatActivity {
                 ContentValues values = new ContentValues();
                 values.put("name", "A Storm of Swords");
                 values.put("pages", 1216);
-                values.put("price", 24.05);
+                values.put("price", 55.55);
                 getContentResolver().update(uri, values, null, null);
             }
         });
