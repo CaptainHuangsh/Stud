@@ -26,6 +26,7 @@ public class JsonActivity extends AppCompatActivity {
     private static final String HOSTS = "http://192.168.0.110:8888/get_data.json";
     private static final int TYPE_JSONOBJECT = 0;
     private static final int TYPE_GSON = 1;
+    private static final int TYPE_SERIAL_GSON = 2;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class JsonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_http_json_parse);
         Button btn = (Button) findViewById(R.id.send_request);
         Button btn2 = (Button) findViewById(R.id.json_gson);
+        Button btn3 = (Button) findViewById(R.id.json_serial_gson);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +47,13 @@ public class JsonActivity extends AppCompatActivity {
                 sendRequestWithOkHttp(TYPE_GSON);
             }
         });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendRequestWithOkHttp(TYPE_SERIAL_GSON);
+            }
+        });
+
     }
 
     private void sendRequestWithOkHttp(final int type) {
@@ -62,12 +71,26 @@ public class JsonActivity extends AppCompatActivity {
                         parseJSONWithJSONObject(responseText);
                     else if (type == TYPE_GSON)
                         parseJSONWithGson(responseText);
+                    else if (type == TYPE_SERIAL_GSON)
+                        parseJSONWithSerialGson(responseText);
 
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }).start();
+    }
+
+    private void parseJSONWithSerialGson(String jsonData) {
+        Gson gson = new Gson();
+        List<AppSerial> appList = gson.fromJson(jsonData,
+                new TypeToken<List<AppSerial>>() {
+                }.getType());
+        for (AppSerial app : appList) {
+            Log.d("JsonActivityGson", "id : " + app.getId());
+            Log.d("JsonActivityGson", "name : " + app.getHname());
+            Log.d("JsonActivityGson","version : "+app.getHversion());
+        }
     }
 
     private void parseJSONWithGson(String jsonData) {
