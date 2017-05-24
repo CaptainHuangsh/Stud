@@ -2,7 +2,6 @@ package com.example.owen.stud.contentProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -29,6 +28,18 @@ public class ContentMain extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ContentMain.this,ProviderActivity.class));
+            }
+        });
+        ((Button)findViewById(R.id.to_sms)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContentMain.this,SmsActivity.class));
+            }
+        });
+        ((Button)findViewById(R.id.to_camera)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContentMain.this,CameraAlbumActivity.class));
             }
         });
     }
