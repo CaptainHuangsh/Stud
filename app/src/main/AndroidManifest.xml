@@ -106,6 +106,9 @@
         <activity android:name=".contentProvider.SmsActivity" />
         <activity android:name=".contentProvider.CameraAlbumActivity" />
 
+        <!--viewPager-->
+        <activity android:name=".viewPager.ViewPagerActivity"/>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

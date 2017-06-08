@@ -20,14 +20,15 @@ import com.example.owen.stud.notification.NotificationMain;
 import com.example.owen.stud.recycleView.RecycleViewMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
+import com.example.owen.stud.viewPager.ViewPagerActivity;
 
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
-            , "Service", "Settings", "DialogMain", "RecycleView","ListViewMain"
-            ,"BaiduMapMain","ContentMain"
+            , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
+            , "BaiduMapMain", "ContentMain", "ViewPager"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this
                 , android.R.layout.simple_list_item_1, items);
         ListView listView = (ListView) findViewById(R.id.list_item);
         listView.setAdapter(adapter);
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("ListViewMain", ListViewMain.class);
         hs.put("BaiduMapMain", BaiduMapMain.class);
         hs.put("ContentMain", ContentMain.class);
+        hs.put("ViewPager", ViewPagerActivity.class);
     }
 
     public void launch(Class<?> cls) {
