@@ -12,12 +12,12 @@ import java.util.List;
  * Created by owen on 2017/6/8.
  */
 
-public class HomePagerAdapter extends FragmentPagerAdapter {
+class HomePagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> titles = new ArrayList<>();
 
-    public HomePagerAdapter(FragmentManager fm) {
+    HomePagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -25,7 +25,7 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
-    public void addTab(Fragment fragment, String title) {
+    void addTab(Fragment fragment, String title) {
         fragments.add(fragment);
         titles.add(title);
     }
