@@ -12,6 +12,7 @@ import java.util.List;
  * Created by owen on 2017/6/8.
  */
 
+
 class HomePagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragments = new ArrayList<>();
