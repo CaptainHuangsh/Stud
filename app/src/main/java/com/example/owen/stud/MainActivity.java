@@ -15,6 +15,7 @@ import com.example.owen.stud.contentProvider.ContentMain;
 import com.example.owen.stud.dataBinding.DataBindingMain;
 import com.example.owen.stud.dialog.DialogMain;
 import com.example.owen.stud.fragment.FragmentMain;
+import com.example.owen.stud.fresco.FrescoMain;
 import com.example.owen.stud.http.HttpMain;
 import com.example.owen.stud.listView.ListViewMain;
 import com.example.owen.stud.notification.NotificationMain;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
-            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding"
+            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding","Fresco"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("ContentMain", ContentMain.class);
         hs.put("ViewPager", ViewPagerActivity.class);
         hs.put("DataBinding", DataBindingMain.class);
+        hs.put("Fresco", FrescoMain.class);
     }
 
     public void launch(Class<?> cls) {
