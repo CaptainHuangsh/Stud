@@ -105,6 +105,7 @@
         <activity android:name=".contentProvider.ProviderActivity" />
         <activity android:name=".contentProvider.SmsActivity" />
         <activity android:name=".contentProvider.CameraAlbumActivity" />
+        <activity android:name=".dataBinding.DataBindingMain"/>
 
         <!--viewPager-->
         <activity android:name=".viewPager.ViewPagerActivity"/>

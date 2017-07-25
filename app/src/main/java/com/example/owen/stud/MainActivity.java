@@ -12,6 +12,7 @@ import com.example.owen.stud.activitylife.ActivityMain;
 import com.example.owen.stud.baiduMap.BaiduMapMain;
 import com.example.owen.stud.broadcast.BroadcastMain;
 import com.example.owen.stud.contentProvider.ContentMain;
+import com.example.owen.stud.dataBinding.DataBindingMain;
 import com.example.owen.stud.dialog.DialogMain;
 import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.http.HttpMain;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
-            , "BaiduMapMain", "ContentMain", "ViewPager"
+            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("BaiduMapMain", BaiduMapMain.class);
         hs.put("ContentMain", ContentMain.class);
         hs.put("ViewPager", ViewPagerActivity.class);
+        hs.put("DataBinding", DataBindingMain.class);
     }
 
     public void launch(Class<?> cls) {
