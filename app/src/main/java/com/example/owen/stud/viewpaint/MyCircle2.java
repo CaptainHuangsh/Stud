@@ -46,13 +46,15 @@ public class MyCircle2 extends View {
         canvas.drawCircle(horizontalCenter, verticalCenter - 250, circleRadius, mPaint);
 
         mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(horizontalCenter, verticalCenter - 250, 160, mPaint);
+        canvas.drawCircle(horizontalCenter, verticalCenter - 250, 160, mPaint);//参数分别是圆心的水平边距、竖直边距、半径
 
         if (progress == 0f) {
             mPaint.setColor(Color.WHITE);
+            //两个长方形
             canvas.drawRect((horizontalCenter - (160 / 3) - 10), (verticalCenter - 250 - (160 / 3) - 20), (horizontalCenter - (160 / 3) + 10), (verticalCenter - 250 - (160 / 3) + 20), mPaint);
             canvas.drawRect((horizontalCenter + (160 / 3) - 10), (verticalCenter - 250 - (160 / 3) - 20), (horizontalCenter + (160 / 3) + 10), (verticalCenter - 250 - (160 / 3) + 20), mPaint);
 
+            //四个小圆形在长方形短边上
             canvas.drawCircle(horizontalCenter - (160 / 3), (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
             canvas.drawCircle(horizontalCenter - (160 / 3), (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
             canvas.drawCircle(horizontalCenter + (160 / 3), (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
