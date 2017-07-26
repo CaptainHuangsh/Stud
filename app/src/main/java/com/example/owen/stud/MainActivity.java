@@ -20,6 +20,7 @@ import com.example.owen.stud.http.HttpMain;
 import com.example.owen.stud.listView.ListViewMain;
 import com.example.owen.stud.notification.NotificationMain;
 import com.example.owen.stud.recycleView.RecycleViewMain;
+import com.example.owen.stud.rxjava2x.RxJava2XMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
 import com.example.owen.stud.viewPager.ViewPagerActivity;
@@ -31,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
-            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding","Fresco","ViewPaint"
+            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding","Fresco"
+            ,"ViewPaint","RxJava2x"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("DataBinding", DataBindingMain.class);
         hs.put("Fresco", FrescoMain.class);
         hs.put("ViewPaint", ViewPaintMain.class);
+        hs.put("RxJava2x", RxJava2XMain.class);
     }
 
     public void launch(Class<?> cls) {
