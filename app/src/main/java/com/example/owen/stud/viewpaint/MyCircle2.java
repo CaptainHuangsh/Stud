@@ -9,26 +9,26 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.example.owen.stud.R;
-import com.example.owen.stud.viewPager.ViewPagerActivity;
 
 /**
  * Created by loopeer on 2017/7/25.
  */
 
-public class MyCircle extends View {
+public class MyCircle2 extends View {
 
     Paint mPaint = new Paint();
-    private float progress = 0f;
+    private float progress = 0f;//0f中间,1f左边，2f右边
+    private int mDirect = 0;
 
-    public MyCircle(Context context) {
+    public MyCircle2(Context context) {
         super(context);
     }
 
-    public MyCircle(Context context, @Nullable AttributeSet attrs) {
+    public MyCircle2(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MyCircle(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MyCircle2(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -57,17 +57,26 @@ public class MyCircle extends View {
             canvas.drawCircle(horizontalCenter - (160 / 3), (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
             canvas.drawCircle(horizontalCenter + (160 / 3), (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
             canvas.drawCircle(horizontalCenter + (160 / 3), (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
-            this.postInvalidateDelayed(3000);    // 延时3000ms
-            progress = 1f;
-//            invalidate();
-        } else {
-            mPaint.setColor(Color.BLACK);
-            canvas.drawRect((horizontalCenter - (160 / 3) - 10), (verticalCenter - 250 - (160 / 3) - 3), (horizontalCenter - (160 / 3) + 10), (verticalCenter - 250 - (160 / 3) + 3), mPaint);
-            canvas.drawRect((horizontalCenter + (160 / 3) - 10), (verticalCenter - 250 - (160 / 3) - 3), (horizontalCenter + (160 / 3) + 10), (verticalCenter - 250 - (160 / 3) + 3), mPaint);
-            this.postInvalidateDelayed(300);    // 延时300ms
-            progress = 0f;
+        } else if (progress == 1f) {
+            mPaint.setColor(Color.WHITE);
+            canvas.drawRect((horizontalCenter - 2 * (160 / 3) - 10), (verticalCenter - 250 - (160 / 3) - 20), (horizontalCenter - 2 * (160 / 3) + 10), (verticalCenter - 250 - (160 / 3) + 20), mPaint);
+            canvas.drawRect((horizontalCenter - 10), (verticalCenter - 250 - (160 / 3) - 20), (horizontalCenter + 10), (verticalCenter - 250 - (160 / 3) + 20), mPaint);
 
+            canvas.drawCircle(horizontalCenter - 2 * (160 / 3), (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
+            canvas.drawCircle(horizontalCenter - 2 * (160 / 3), (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
+            canvas.drawCircle(horizontalCenter, (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
+            canvas.drawCircle(horizontalCenter, (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
+        } else if (progress == 2f) {
+            mPaint.setColor(Color.WHITE);
+            canvas.drawRect(horizontalCenter-10, (verticalCenter - 250 - (160 / 3) - 20), (horizontalCenter + 10), (verticalCenter - 250 - (160 / 3) + 20), mPaint);
+            canvas.drawRect((horizontalCenter + 2 * (160 / 3) - 10), (verticalCenter - 250 - (160 / 3) - 20), (horizontalCenter + 2 * (160 / 3) + 10), (verticalCenter - 250 - (160 / 3) + 20), mPaint);
+
+            canvas.drawCircle(horizontalCenter, (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
+            canvas.drawCircle(horizontalCenter, (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
+            canvas.drawCircle(horizontalCenter + 2 * (160 / 3), (verticalCenter - 250 - (160 / 3) - 20), 10, mPaint);
+            canvas.drawCircle(horizontalCenter + 2 * (160 / 3), (verticalCenter - 250 - (160 / 3) + 20), 10, mPaint);
         }
+        invalidate();
 
     }
 
@@ -76,8 +85,26 @@ public class MyCircle extends View {
         super.invalidate();
     }*/
 
+    public void eyesDirect(int direct) {
+        switch (direct) {
+            case 0:
+                progress = 0f;
+                break;
+            case 1:
+                progress = 1f;
+                break;
+            case 2:
+                progress = 2f;
+                break;
+            default:
+        }
+
+    }
+
+
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
+
 }

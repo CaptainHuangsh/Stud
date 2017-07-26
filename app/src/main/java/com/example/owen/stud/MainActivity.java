@@ -23,6 +23,7 @@ import com.example.owen.stud.recycleView.RecycleViewMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
 import com.example.owen.stud.viewPager.ViewPagerActivity;
+import com.example.owen.stud.viewpaint.ViewPaintMain;
 
 import java.util.HashMap;
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
-            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding","Fresco"
+            , "BaiduMapMain", "ContentMain", "ViewPager","DataBinding","Fresco","ViewPaint"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         hs.put("ViewPager", ViewPagerActivity.class);
         hs.put("DataBinding", DataBindingMain.class);
         hs.put("Fresco", FrescoMain.class);
+        hs.put("ViewPaint", ViewPaintMain.class);
     }
 
     public void launch(Class<?> cls) {

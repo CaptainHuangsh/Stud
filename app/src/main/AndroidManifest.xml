@@ -116,6 +116,11 @@
         <!--fresco-->
         <activity android:name=".fresco.FrescoMain"/>
 
+        <!--viewPaint-->
+        <activity android:name=".viewpaint.ViewPaintMain"/>
+        <activity android:name=".viewpaint.ViewPaintTime"/>
+        <activity android:name=".viewpaint.ViewPaintDirect"/>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
