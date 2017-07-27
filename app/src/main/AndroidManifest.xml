@@ -124,6 +124,13 @@
         <!--rxjava2x-->
         <activity android:name=".rxjava2x.RxJava2XMain"/>
 
+        <!--kotlin-->
+        <activity android:name=".kotlin.KotlinMain"/>
+
+        <!--rxBus-->
+        <activity android:name=".rxBux.RxBusGetInfo"/>
+        <activity android:name=".rxBux.RxBusMain"/>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

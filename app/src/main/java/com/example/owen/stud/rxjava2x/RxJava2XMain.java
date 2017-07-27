@@ -8,11 +8,19 @@ import android.util.Log;
 
 import com.example.owen.stud.R;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
+import java.util.function.Function;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.exceptions.Exceptions;
 
 /**
  * Created by loopeer on 2017/7/26.
@@ -61,7 +69,7 @@ public class RxJava2XMain extends Activity {
         });
     }
 
-    private void test2(){
+    private void test2() {
 
         Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
@@ -80,6 +88,7 @@ public class RxJava2XMain extends Activity {
         }).subscribe(new Observer<Integer>() {
             private Disposable mDisposable;
             private int i;
+
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, "subscribe");
@@ -90,22 +99,26 @@ public class RxJava2XMain extends Activity {
             public void onNext(Integer value) {
                 Log.d(TAG, "onNext");
                 i++;
-                if (i ==2){
-                    Log.d(TAG,"dispose");
+                if (i == 2) {
+                    Log.d(TAG, "dispose");
                     mDisposable.dispose();
-                    Log.d(TAG,"isDisposed : "+mDisposable.isDisposed());
+                    Log.d(TAG, "isDisposed : " + mDisposable.isDisposed());
                 }
             }
 
             @Override
             public void onError(Throwable e) {
-                    Log.d(TAG,"error");
+                Log.d(TAG, "error");
             }
 
             @Override
             public void onComplete() {
-                Log.d(TAG,"complete");
+                Log.d(TAG, "complete");
             }
         });
+    }
+
+    private void test3() {
+
     }
 }

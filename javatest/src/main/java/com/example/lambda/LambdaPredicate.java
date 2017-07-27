@@ -51,7 +51,7 @@ public class LambdaPredicate {
 
     }
 */
-    public static void filter(List names, Predicate condition) {
+    private static void filter(List names, Predicate condition) {
 
         names.stream().filter((name) -> (condition.test(name))).forEach((name) -> {
 

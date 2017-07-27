@@ -21,6 +21,7 @@
 
         <!-- 布局文件中的表达式使用 “@{}” 的语法 -->
         <TextView
+            android:id="@+id/to_kotlin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.lastName}" />
