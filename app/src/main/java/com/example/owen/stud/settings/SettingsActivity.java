@@ -165,7 +165,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
     /**
      * This fragment shows general preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
+     * activity_kotlin_j_main is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
@@ -196,7 +196,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
     /**
      * This fragment shows notification preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
+     * activity_kotlin_j_main is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class NotificationPreferenceFragment extends PreferenceFragment {
@@ -226,7 +226,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
     /**
      * This fragment shows data and sync preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
+     * activity_kotlin_j_main is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class DataSyncPreferenceFragment extends PreferenceFragment {

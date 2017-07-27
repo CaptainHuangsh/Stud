@@ -3,6 +3,7 @@ package com.example;
 
 //http://blog.csdn.net/xuxurui007/article/details/7685076
 public class MyClass {
+
     public static void main(String args[]){
 
         System.out.println("java Test");
