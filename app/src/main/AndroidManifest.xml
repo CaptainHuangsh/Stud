@@ -50,6 +50,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".TestActivity"/>
+
         <!-- http -->
         <activity android:name=".http.HttpMain" />
         <activity android:name=".http.netParse.jsonParse.JsonActivity" />
@@ -117,9 +120,7 @@
         <activity android:name=".fresco.FrescoMain"/>
 
         <!--viewPaint-->
-        <activity android:name=".viewpaint.ViewPaintMain"/>
-        <activity android:name=".viewpaint.ViewPaintTime"/>
-        <activity android:name=".viewpaint.ViewPaintDirect"/>
+        <activity android:name=".viewPaint.ViewPaintMain"/>
 
         <!--rxjava2x-->
         <activity android:name=".rxjava2x.RxJava2XMain"/>

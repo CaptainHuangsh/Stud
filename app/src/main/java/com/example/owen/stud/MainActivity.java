@@ -26,7 +26,7 @@ import com.example.owen.stud.rxjava2x.RxJava2XMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
 import com.example.owen.stud.viewPager.ViewPagerActivity;
-import com.example.owen.stud.viewpaint.ViewPaintMain;
+import com.example.owen.stud.viewPaint.ViewPaintMain;
 
 import java.util.HashMap;
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
             , "BaiduMapMain", "ContentMain", "ViewPager", "DataBinding", "Fresco"
-            , "ViewPaint", "RxJava2x", "Kotlin","RxBus"
+            , "RxJava2x", "Kotlin", "RxBus", "Test"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
         hs.put("ViewPager", ViewPagerActivity.class);
         hs.put("DataBinding", DataBindingMain.class);
         hs.put("Fresco", FrescoMain.class);
-        hs.put("ViewPaint", ViewPaintMain.class);
         hs.put("RxJava2x", RxJava2XMain.class);
         hs.put("Kotlin", KotlinMain.class);
-        hs.put("RxBus",RxBusMain.class);
+        hs.put("RxBus", RxBusMain.class);
+        hs.put("Test", TestActivity.class);
     }
 
     public void launch(Class<?> cls) {

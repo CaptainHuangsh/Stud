@@ -10,7 +10,25 @@
         <!--按钮字体大小-->
         <attr name="img_txt_btn_pic" format="reference" />
         <!--按钮左侧图标-->
-        <attr name="img_txt_btn_padding" format="dimension"/>
+        <attr name="img_txt_btn_padding" format="dimension" />
 
     </declare-styleable>
+
+    <declare-styleable name="LineChartView">
+        <attr name="lineColor" format="color" />
+        <!--折线的颜色-->
+        <attr name="dividerCount" format="integer" />
+        <!--纵轴分割数量-->
+        <attr name="xInterval" format="dimension" />
+        <!--X轴每个刻度的间距间距-->
+        <attr name="leftInterval" format="dimension" />
+        <!-- Y轴距离view长度-->
+        <attr name="bottomInterval" format="dimension" />
+        <!--X轴距离view底部的高度-->
+        <attr name="topInterval" format="dimension" />
+        <!--X轴距离view顶部长度-->
+        <attr name="yAxisFontSize" format="dimension" />
+        <!--Y轴字体的大小-->
+    </declare-styleable>
+
 </resources>
