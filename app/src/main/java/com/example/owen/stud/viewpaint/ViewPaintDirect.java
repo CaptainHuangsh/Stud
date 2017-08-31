@@ -1,4 +1,4 @@
-package com.example.owen.stud.viewpaint;
+package com.example.owen.stud.viewPaint;
 
 import android.app.Activity;
 import android.os.Bundle;

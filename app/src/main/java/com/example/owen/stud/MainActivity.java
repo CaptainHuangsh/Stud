@@ -9,15 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.owen.stud.activitylife.ActivityMain;
+import com.example.owen.stud.animation.AnimationMain;
 import com.example.owen.stud.baiduMap.BaiduMapMain;
 import com.example.owen.stud.broadcast.BroadcastMain;
 import com.example.owen.stud.contentProvider.ContentMain;
-import com.example.owen.stud.dataBinding.DataBindingMain;
 import com.example.owen.stud.dialog.DialogMain;
 import com.example.owen.stud.fragment.FragmentMain;
 import com.example.owen.stud.fresco.FrescoMain;
 import com.example.owen.stud.http.HttpMain;
-import com.example.owen.stud.kotlin.KotlinMain;
 import com.example.owen.stud.listView.ListViewMain;
 import com.example.owen.stud.notification.NotificationMain;
 import com.example.owen.stud.recycleView.RecycleViewMain;
@@ -26,7 +25,6 @@ import com.example.owen.stud.rxjava2x.RxJava2XMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
 import com.example.owen.stud.viewPager.ViewPagerActivity;
-import com.example.owen.stud.viewPaint.ViewPaintMain;
 
 import java.util.HashMap;
 
@@ -34,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] items = {
             "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
-            , "BaiduMapMain", "ContentMain", "ViewPager", "DataBinding", "Fresco"
-            , "RxJava2x", "Kotlin", "RxBus", "Test"
+            , "BaiduMapMain", "ContentMain", "ViewPager", "Fresco"
+            , "RxJava2x", "RxBus", "Test","Animation"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
 
@@ -72,12 +70,11 @@ public class MainActivity extends AppCompatActivity {
         hs.put("BaiduMapMain", BaiduMapMain.class);
         hs.put("ContentMain", ContentMain.class);
         hs.put("ViewPager", ViewPagerActivity.class);
-        hs.put("DataBinding", DataBindingMain.class);
         hs.put("Fresco", FrescoMain.class);
         hs.put("RxJava2x", RxJava2XMain.class);
-        hs.put("Kotlin", KotlinMain.class);
         hs.put("RxBus", RxBusMain.class);
         hs.put("Test", TestActivity.class);
+        hs.put("Animation", AnimationMain.class);
     }
 
     public void launch(Class<?> cls) {
