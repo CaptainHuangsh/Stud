@@ -5,11 +5,13 @@
     android:orientation="vertical">
 
     <Button
+        android:text="viewAnimation"
         android:id="@+id/btn_view_ani"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
+        android:text="propertyAnimation"
         android:id="@+id/btn_view_pro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -18,7 +18,9 @@ public class AnimationMain extends AppCompatActivity {
         setContentView(R.layout.activity_animation_main);
         findViewById(R.id.btn_view_ani).setOnClickListener(v -> {
             startActivity(new Intent(this, ViewAnimation.class));
-//            startActivity(new Intent(this, PropertyAnimation.class));
+        });
+        findViewById(R.id.btn_view_pro).setOnClickListener(v->{
+            startActivity(new Intent(this, PropertyAnimation.class));
         });
     }
 }

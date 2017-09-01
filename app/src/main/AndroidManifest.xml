@@ -131,6 +131,7 @@
         <!--animation-->
         <activity android:name=".animation.AnimationMain" />
         <activity android:name=".animation.ViewAnimation"/>
+        <activity android:name=".animation.PropertyAnimation"/>
 
         <service
             android:name="com.baidu.location.f"
