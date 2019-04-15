@@ -1,5 +1,6 @@
 package com.example.owen.stud.broadcast;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 import com.example.owen.stud.R;
 
-public class BroadcastMain extends AppCompatActivity {
+public class BroadcastMain extends Activity {
 
     private IntentFilter intentFilter;
     private NetworkChangeReceiver networkChangeReceiver;

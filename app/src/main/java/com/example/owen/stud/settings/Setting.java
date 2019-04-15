@@ -18,7 +18,7 @@ import com.example.owen.stud.R;
  * 以前的PreferenceActivity已经不提倡使用，官方推荐使用Fragment
  */
 
-public class Setting extends AppCompatActivity {
+public class Setting extends Activity {
     public static final String PRES_NAME = "com.owen.settings";
     public Context mContext = null;
 

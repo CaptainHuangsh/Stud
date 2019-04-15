@@ -1,5 +1,6 @@
 package com.example.owen.stud.contentProvider;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
@@ -16,7 +17,7 @@ import com.example.owen.stud.R;
  * Created by owen on 2017/5/21.
  */
 
-public class ProviderActivity extends AppCompatActivity {
+public class ProviderActivity extends Activity {
 
     private String newId;
 

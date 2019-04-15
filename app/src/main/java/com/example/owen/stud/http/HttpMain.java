@@ -1,5 +1,6 @@
 package com.example.owen.stud.http;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import com.example.owen.stud.http.network.httpURLConnection.HttpURLConnectionMai
 import com.example.owen.stud.http.network.okHttp.OkHttpMain;
 
 
-public class HttpMain extends AppCompatActivity {
+public class HttpMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

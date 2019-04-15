@@ -1,5 +1,6 @@
 package com.example.owen.stud.notification;
 
+import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -16,7 +17,7 @@ import android.widget.RemoteViews;
 
 import com.example.owen.stud.R;
 
-public class NotificationMain extends AppCompatActivity {
+public class NotificationMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

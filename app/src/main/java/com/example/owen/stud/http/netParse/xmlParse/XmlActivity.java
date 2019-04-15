@@ -1,5 +1,6 @@
 package com.example.owen.stud.http.netParse.xmlParse;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,7 +24,7 @@ import okhttp3.Response;
  * Created by owen on 2017/5/6.
  */
 
-public class XmlActivity extends AppCompatActivity {
+public class XmlActivity extends Activity {
     private static final String HOSTS = "http://192.168.0.110:8888/get_data.xml";
     private static final int TYPE_PULL = 0;
     private static final int TYPE_SAX = 1;

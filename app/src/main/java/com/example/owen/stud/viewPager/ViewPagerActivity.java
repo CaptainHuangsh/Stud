@@ -1,5 +1,6 @@
 package com.example.owen.stud.viewPager;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
@@ -14,15 +15,15 @@ import com.example.owen.stud.R;
  * Created by owen on 2017/6/8.
  */
 
-public class ViewPagerActivity extends AppCompatActivity {
+public class ViewPagerActivity extends Activity {
     ViewPager mViewPager;
     HomePagerAdapter adapter;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_main);
-        findViews();
-        init();
+//        findViews();
+//        init();
     }
 
     @Override
@@ -49,6 +50,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     }
 
     private void init() {
+/*
         adapter = new HomePagerAdapter(getSupportFragmentManager());
         Fragment0 fm0 = new Fragment0();
         Fragment0 fm1 = new Fragment0();
@@ -56,6 +58,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         adapter.addTab(fm1, "bbb");
         mViewPager.setAdapter(adapter);
 //        mTabLayout.setupWithViewPager(mViewPager, false);
+*/
 
     }
 

@@ -1,5 +1,6 @@
 package com.example.owen.stud.listView;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,7 +12,7 @@ import android.widget.ListView;
 
 import com.example.owen.stud.R;
 
-public class ListViewMain extends AppCompatActivity {
+public class ListViewMain extends Activity {
     private ListView listView;
     private ListViewAdapter adapter;
     private String[] beans = new String[]{"1", "2", "3", "4", "5", "6", "7",

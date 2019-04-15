@@ -1,5 +1,6 @@
 package com.example.owen.stud.http.network.httpClient;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,7 +16,7 @@ import com.example.owen.stud.R;
 /**
  * Android6.0之后被弃用
  */
-public class HttpClient extends AppCompatActivity {
+public class HttpClient extends Activity {
     public static final int SHOW_RESPONSE = 0;
     private TextView text;
     private Handler handler = new Handler() {

@@ -1,5 +1,6 @@
 package com.example.owen.stud.contentProvider;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +14,7 @@ import com.example.owen.stud.R;
  * Created by owen on 2017/5/21.
  */
 
-public class ContentMain extends AppCompatActivity{
+public class ContentMain extends Activity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

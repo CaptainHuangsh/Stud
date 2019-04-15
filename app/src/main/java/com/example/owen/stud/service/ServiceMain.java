@@ -1,5 +1,6 @@
 package com.example.owen.stud.service;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -19,7 +20,7 @@ import com.example.owen.stud.R;
  * 异步消息处理机制
  */
 
-public class ServiceMain extends AppCompatActivity implements View.OnClickListener {
+public class ServiceMain extends Activity implements View.OnClickListener {
     public static final int UPDATE_TEXT = 1;
     private Button btn;
     private Button btn2;

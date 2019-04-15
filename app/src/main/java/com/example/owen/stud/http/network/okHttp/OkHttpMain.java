@@ -1,5 +1,6 @@
 package com.example.owen.stud.http.network.okHttp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,7 +17,7 @@ import okhttp3.Response;
  * Created by owen on 2017/5/6.
  */
 
-public class OkHttpMain extends AppCompatActivity {
+public class OkHttpMain extends Activity {
     TextView text;
     @Override
     public void onCreate(Bundle savedInstanceState) {
