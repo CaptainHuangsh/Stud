@@ -1,12 +1,9 @@
-package com.example.owen.stud.viewpaint;
+package com.example.owen.stud.viewPaint;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.owen.stud.R;
 
@@ -25,7 +22,7 @@ public class ViewPaintDirect extends Activity {
             @Override
             public void onClick(View v) {
                 circle2.eyesDirect(1);
-                Log.d("ViewPaintDirectLeftOnClick"," : 1");
+//                Log.d("ViewPaintDirectLeftOnClick"," : 1");
             }
         });
         findViewById(R.id.middle).setOnClickListener(new View.OnClickListener() {

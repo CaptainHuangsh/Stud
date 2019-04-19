@@ -1,5 +1,6 @@
 package com.example.owen.stud.activitylife;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.owen.stud.R;
 
-public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends Activity {
     private static final String TAG="SecondActivity";
 
     @Override
@@ -19,7 +20,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_life_second);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
         Log.i(TAG, "onCreate");
         Toast.makeText(this, TAG + "  onCreate", Toast.LENGTH_SHORT).show();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

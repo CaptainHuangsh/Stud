@@ -1,8 +1,8 @@
 package com.example.owen.stud;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,41 +26,30 @@ import com.example.owen.stud.rxjava2x.RxJava2XMain;
 import com.example.owen.stud.service.ServiceMain;
 import com.example.owen.stud.settings.SettingMain;
 import com.example.owen.stud.viewPager.ViewPagerActivity;
-import com.example.owen.stud.viewPaint.ViewPaintMain;
 
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private String[] items = {
-            "NetWork", "ActivityLife", "Fragment", "Broadcast", "Notification"
+            "NetWork", "LifeCycle", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
             , "BaiduMapMain", "ContentMain", "ViewPager", "DataBinding", "Fresco"
-            , "RxJava2x", "Kotlin", "RxBus", "Test"
+            , "RxJava2x", "Kotlin", "RxBus","TODO// Third Library ","TODO// Custom"
+            ,"TODO//  awersome","TODO// Ansync", "Test"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this
-                , android.R.layout.simple_list_item_1, items);
-        ListView listView = (ListView) findViewById(R.id.list_item);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                launch(hs.get(items[position]));
-            }
-        });
+        initLocalData();
+        initView();
     }
 
-
-    public void init() {
+    public void initLocalData() {
         hs.put("NetWork", HttpMain.class);
-        hs.put("ActivityLife", ActivityMain.class);
+        hs.put("LifeCycle", ActivityMain.class);
         hs.put("Fragment", FragmentMain.class);
         hs.put("Broadcast", BroadcastMain.class);
         hs.put("Notification", NotificationMain.class);
@@ -78,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
         hs.put("Kotlin", KotlinMain.class);
         hs.put("RxBus", RxBusMain.class);
         hs.put("Test", TestActivity.class);
+    }
+
+    private void initView() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this
+                , android.R.layout.simple_list_item_1, items);
+        ListView listView = (ListView) findViewById(R.id.list_item);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                launch(hs.get(items[position]));
+            }
+        });
     }
 
     public void launch(Class<?> cls) {

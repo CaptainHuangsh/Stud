@@ -1,5 +1,6 @@
 package com.example.owen.stud.settings;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.widget.Button;
 
 import com.example.owen.stud.R;
 
-public class SettingMain extends AppCompatActivity {
+public class SettingMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

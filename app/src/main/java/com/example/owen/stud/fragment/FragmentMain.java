@@ -1,5 +1,6 @@
 package com.example.owen.stud.fragment;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -10,7 +11,7 @@ import android.widget.Button;
 
 import com.example.owen.stud.R;
 
-public class FragmentMain extends AppCompatActivity {
+public class FragmentMain extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

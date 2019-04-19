@@ -1,5 +1,6 @@
 package com.example.owen.stud.activitylife;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.example.owen.stud.R;
@@ -8,7 +9,7 @@ import com.example.owen.stud.R;
  * Created by owen on 2017/4/29.
  */
 
-public class DialogActivity extends AppCompatActivity{
+public class DialogActivity extends Activity {
 
     @Override
     public void onCreate( Bundle savedInstanceState) {

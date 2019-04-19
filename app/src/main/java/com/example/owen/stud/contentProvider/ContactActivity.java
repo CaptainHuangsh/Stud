@@ -1,6 +1,7 @@
 package com.example.owen.stud.contentProvider;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -26,7 +27,7 @@ import java.util.List;
  * Created by owen on 2017/5/21.
  */
 
-public class ContactActivity extends AppCompatActivity {
+public class ContactActivity extends Activity {
 
     ListView contactsView;
     ArrayAdapter<String> adapter;

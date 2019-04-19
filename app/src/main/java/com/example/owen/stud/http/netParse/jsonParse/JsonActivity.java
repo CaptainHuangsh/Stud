@@ -1,5 +1,6 @@
 package com.example.owen.stud.http.netParse.jsonParse;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,7 @@ import okhttp3.Response;
  * Created by owen on 2017/5/7.
  */
 
-public class JsonActivity extends AppCompatActivity {
+public class JsonActivity extends Activity {
     private static final String HOSTS = "http://192.168.0.110:8888/get_data.json";
     private static final int TYPE_JSONOBJECT = 0;
     private static final int TYPE_GSON = 1;

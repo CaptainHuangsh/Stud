@@ -1,5 +1,6 @@
 package com.example.owen.stud.http.network;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
@@ -12,7 +13,7 @@ import com.example.owen.stud.R;
  * Created by owen on 2017/5/6.
  */
 
-public class SimpleWebView extends AppCompatActivity {
+public class SimpleWebView extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
