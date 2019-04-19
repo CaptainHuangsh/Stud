@@ -3,7 +3,6 @@ package com.example.owen.stud.activitylife;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +33,7 @@ public class ActivityMain extends Activity {
                 startActivity(new Intent(ActivityMain.this,DialogActivity.class));
             }
         });
+        findViewById(R.id.btn_task).setOnClickListener(v-> startActivity(new Intent(this,ActivityA.class)));
     }
 
     @Override
