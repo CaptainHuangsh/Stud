@@ -1,4 +1,4 @@
-package com.example.owen.stud.viewpaint;
+package com.example.owen.stud.viewPaint;
 
 import android.content.Context;
 import android.graphics.Canvas;

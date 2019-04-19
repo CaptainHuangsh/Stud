@@ -12,12 +12,12 @@ import com.example.owen.stud.R;
  */
 
 public class ViewPaintDirect extends Activity {
-    com.example.owen.stud.viewpaint.MyCircle2 circle2;
+    MyCircle2 circle2;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_paint_left_right);
-        circle2 = (com.example.owen.stud.viewpaint.MyCircle2)findViewById(R.id.mycirrle2);
+        circle2 = (MyCircle2)findViewById(R.id.mycirrle2);
         findViewById(R.id.left).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
