@@ -9,14 +9,16 @@
 
     <Button
         android:id="@+id/button"
-        android:text="Message处理ui"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Message处理ui" />
+
     <Button
-        android:text="直接一步ui操作"
         android:id="@+id/button2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="直接一步ui操作" />
+
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
@@ -26,30 +28,60 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/start_service"
-        android:text="start_service"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="start_service" />
+
     <Button
         android:id="@+id/stop_service"
-        android:text="stop_service"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="stop_service" />
+
     <Button
         android:id="@+id/bind_service"
-        android:text="bind_service"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="bind_service" />
+
     <Button
         android:id="@+id/unbind_service"
-        android:text="unbind_service"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="unbind_service" />
+
     <Button
         android:id="@+id/start_intent_service"
-        android:text="Start IntentService"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Start IntentService" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_music_service_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="start_music" />
+
+        <Button
+            android:id="@+id/btn_music_service_go"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="go_music" />
+
+        <Button
+            android:id="@+id/btn_music_service_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="stop_music" />
+    </LinearLayout>
 </LinearLayout>

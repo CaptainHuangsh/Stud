@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -135,11 +137,25 @@
             android:name=".activitylife.ActivityB"
             android:launchMode="singleInstance" />
         <activity android:name=".activitylife.ActivityC" />
+        <activity android:name=".service.MusicActivity" />
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
+        <service
+            android:name=".service.musicService.MusicService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_menu_camera"
+            android:label="music" />
+        <service
+            android:name=".service.musicService.RemoteMusicService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_menu_camera"
+            android:label="music"
+            android:process=":music" />
 
         <provider
             android:name="com.example.owen.stud.contentProvider.DatabaseProvider"

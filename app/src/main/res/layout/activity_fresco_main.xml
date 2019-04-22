@@ -6,13 +6,19 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="sdfsfsd"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="sdfsfsd" />
+
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/my_image_view"
         android:layout_width="160dp"
         android:layout_height="160dp"
         fresco:placeholderImage="@drawable/ic_menu_slideshow" />
+
+    <ImageView
+        android:id="@+id/iv_im_loader"
+        android:layout_width="160dp"
+        android:layout_height="160dp" />
 
 </LinearLayout>

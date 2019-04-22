@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.owen.stud.R;
+import com.example.owen.stud.service.musicService.MusicService;
 
 /**
  * 异步消息处理机制
@@ -29,6 +30,11 @@ public class ServiceMain extends Activity implements View.OnClickListener {
     private Button btn5;
     private Button btn6;
     private Button btn7;
+    private Button btn8;
+    private Button btn9;
+    private Button btn10;
+
+    private Intent serviceIntent;
 
     private MyService.DownloadBinder downloadBinder;
     private ServiceConnection connection = new ServiceConnection() {
@@ -73,6 +79,9 @@ public class ServiceMain extends Activity implements View.OnClickListener {
         btn5 = (Button) findViewById(R.id.bind_service);
         btn6 = (Button) findViewById(R.id.unbind_service);
         btn7 = (Button) findViewById(R.id.start_intent_service);
+        btn8 = (Button) findViewById(R.id.btn_music_service_start);
+        btn9 = (Button) findViewById(R.id.btn_music_service_go);
+        btn10 = (Button) findViewById(R.id.btn_music_service_stop);
         txt = (TextView) findViewById(R.id.text1);
         btn2.setOnClickListener(this);
         btn.setOnClickListener(this);
@@ -81,6 +90,9 @@ public class ServiceMain extends Activity implements View.OnClickListener {
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
         btn7.setOnClickListener(this);
+        btn8.setOnClickListener(this);
+        btn9.setOnClickListener(this);
+        btn10.setOnClickListener(this);
     }
 
     @Override
@@ -125,8 +137,18 @@ public class ServiceMain extends Activity implements View.OnClickListener {
                 //打印主线程id
                 Log.d("ServiceMain ", " Thread id is " + Thread.currentThread()
                         .getId());
-                Intent intentService = new Intent(this,MyIntentService.class);
+                Intent intentService = new Intent(this, MyIntentService.class);
                 startService(intentService);
+                break;
+            case R.id.btn_music_service_start:
+                serviceIntent = new Intent(ServiceMain.this, MusicService.class);
+                startService(serviceIntent);
+                break;
+            case R.id.btn_music_service_go:
+                startActivity(new Intent(this, MusicActivity.class));
+                break;
+            case R.id.btn_music_service_stop:
+                stopService(serviceIntent);
                 break;
             default:
                 break;
