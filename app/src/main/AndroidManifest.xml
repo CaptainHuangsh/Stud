@@ -138,6 +138,7 @@
             android:launchMode="singleInstance" />
         <activity android:name=".activitylife.ActivityC" />
         <activity android:name=".service.MusicActivity" />
+        <activity android:name=".service.Thread.HandlerThreadActivity" />
 
         <service
             android:name="com.baidu.location.f"
