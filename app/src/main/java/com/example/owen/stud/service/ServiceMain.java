@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.owen.stud.R;
+import com.example.owen.stud.service.Thread.HandlerThreadActivity;
 import com.example.owen.stud.service.musicService.MusicService;
 
 /**
@@ -131,7 +132,8 @@ public class ServiceMain extends Activity implements View.OnClickListener {
                 bindService(bindIntent, connection, BIND_AUTO_CREATE);//绑定服务
                 break;
             case R.id.unbind_service:
-                unbindService(connection);//接触绑定
+//                unbindService(connection);//接触绑定
+                HandlerThreadActivity.start(ServiceMain.this);
                 break;
             case R.id.start_intent_service:
                 //打印主线程id

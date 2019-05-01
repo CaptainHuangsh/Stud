@@ -1,10 +1,16 @@
 package com.example.owen.stud.service.AsyncTask;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.widget.Toast;
+
+import com.example.owen.stud.fresco.MyApplication;
+
 /**
  * Created by owen on 2017/5/1.
  */
 
-/*public class DownloadTask extends AsyncTask<Void, Integer, Boolean> {
+public class DownloadTask extends AsyncTask<Void, Integer, Boolean> {
     ProgressDialog progressDialog;
 
     @Override
@@ -23,6 +29,10 @@ package com.example.owen.stud.service.AsyncTask;
         return true;
     }
 
+    private int doDownload() {
+        return 0;
+    }
+
     @Override
     protected void onPreExecute() {
         progressDialog.show();
@@ -39,9 +49,9 @@ package com.example.owen.stud.service.AsyncTask;
         progressDialog.dismiss();//关闭进度对话框
         //在这里显示下载结果
         if(aBoolean){
-            Toast.makeText(context,"Download succeeded",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyApplication.context,"Download succeeded",Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(context,"Download failed",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyApplication.context,"Download failed",Toast.LENGTH_SHORT).show();
         }
     }
-}*/
+}

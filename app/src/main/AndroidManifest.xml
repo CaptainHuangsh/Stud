@@ -142,6 +142,7 @@
         <activity android:name=".Animation.FrameAnimTest" />
         <activity android:name=".Animation.TweenAnimTest" />
         <activity android:name=".Animation.ValueAnimTest" />
+        <activity android:name=".service.Thread.HandlerThreadActivity" />
 
         <service
             android:name="com.baidu.location.f"
