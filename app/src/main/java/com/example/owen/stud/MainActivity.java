@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.owen.stud.Animation.AnimMain;
 import com.example.owen.stud.activitylife.ActivityMain;
 import com.example.owen.stud.baiduMap.BaiduMapMain;
 import com.example.owen.stud.broadcast.BroadcastMain;
@@ -34,7 +35,7 @@ public class MainActivity extends Activity {
             "NetWork", "LifeCycle", "Fragment", "Broadcast", "Notification"
             , "Service", "Settings", "DialogMain", "RecycleView", "ListViewMain"
             , "BaiduMapMain", "ContentMain", "ViewPager", "DataBinding", "Fresco"
-            , "RxJava2x", "Kotlin", "RxBus","TODO// Third Library ","TODO// Custom"
+            , "RxJava2x", "Kotlin", "RxBus","Animation","TODO// Third Library ","TODO// Custom"
             ,"TODO//  awersome","TODO// Ansync", "Test"
     };
     HashMap<String, Class<?>> hs = new HashMap<>();
@@ -67,6 +68,7 @@ public class MainActivity extends Activity {
         hs.put("Kotlin", KotlinMain.class);
         hs.put("RxBus", RxBusMain.class);
         hs.put("Test", TestActivity.class);
+        hs.put("Animation", AnimMain.class);
     }
 
     private void initView() {

@@ -137,8 +137,7 @@ public class ServiceMain extends Activity implements View.OnClickListener {
                 //打印主线程id
                 Log.d("ServiceMain ", " Thread id is " + Thread.currentThread()
                         .getId());
-                Intent intentService = new Intent(this, MyIntentService.class);
-                startService(intentService);
+                startIntentService();
                 break;
             case R.id.btn_music_service_start:
                 serviceIntent = new Intent(ServiceMain.this, MusicService.class);
@@ -153,6 +152,25 @@ public class ServiceMain extends Activity implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    private void startIntentService() {
+        //同一服务只会开启一个工作线程
+        //在onHandleIntent函数里依次处理intent请求。
+
+        Intent i = new Intent("com.owen.stud");
+        Bundle bundle = new Bundle();
+        bundle.putString("taskName", "task1");
+        i.putExtras(bundle);
+        startService(i);
+
+        Intent i2 = new Intent("com.owen.stud");
+        Bundle bundle2 = new Bundle();
+        bundle2.putString("taskName", "task2");
+        i2.putExtras(bundle2);
+        startService(i2);
+
+        startService(i);  //多次启动
     }
 
 

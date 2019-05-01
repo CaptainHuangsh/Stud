@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/gakki_1"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_2"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_3"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_4"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_5"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_6"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_7"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_8"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_9"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_10"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_11"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_12"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_13"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_14"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_15"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_16"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_17"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_18"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_19"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_20"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_21"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_22"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_23"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_24"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_25"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_26"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_27"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_28"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_29"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_30"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_31"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_32"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_33"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_34"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_35"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/gakki_36"
+        android:duration="80" />
+
+
+</animation-list>

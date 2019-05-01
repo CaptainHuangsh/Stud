@@ -138,6 +138,10 @@
             android:launchMode="singleInstance" />
         <activity android:name=".activitylife.ActivityC" />
         <activity android:name=".service.MusicActivity" />
+        <activity android:name=".Animation.AnimMain" />
+        <activity android:name=".Animation.FrameAnimTest" />
+        <activity android:name=".Animation.TweenAnimTest" />
+        <activity android:name=".Animation.ValueAnimTest" />
 
         <service
             android:name="com.baidu.location.f"
@@ -156,6 +160,11 @@
             android:icon="@drawable/ic_menu_camera"
             android:label="music"
             android:process=":music" />
+        <service android:name=".service.MyIntentService" >
+            <intent-filter>
+                <action android:name="com.owen.stud"/>
+            </intent-filter>
+        </service>
 
         <provider
             android:name="com.example.owen.stud.contentProvider.DatabaseProvider"
